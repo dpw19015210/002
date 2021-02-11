@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	
+		<link rel="stylesheet" type="text/css" href="1/CSS/bootstrap-theme.css" />
+		<link rel="stylesheet" type="text/css" href="1/CSS/bootstrap.css" />
+		<script type="text/javascript" src="js/jquery.js"></script> 
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+<title>垃圾分类知识问答</title>
+		<style type="text/css">
+			* { 
+							margin: 0;
+							padding: 0;
+							font-family: sans-serif;  
+						}
+			body{    
+			
+				background: url(img/b.png) no-repeat; 
+				background-size: cover ;
+				   
+			
+			}
+		
+						.O {
+			
+			    
+							display: flex;
+							margin-top: 40px;
+							margin-left: 60px;
+							flex-wrap: wrap
+						}
+						
+						#M{
+							margin-left: 150px;
+							width:50px;
+							height: 20px;
+						}
+						#N{
+							margin-top: 20px;
+							display: flex;
+						}
+			        #J{
+			              
+							margin-left: -110px;
+							
+								 background: rgb(0,0,0,0.4);
+								 width: 200px;
+								 height: 100px;
+								 padding: 20px;
+								
+				                 text-align: center;
+								
+						border: 3px solid white;
+						
+								 color: white;
+							
+						}
+						
+						#one {  
+						    width: 20px;  
+						    margin: 0 auto;  
+						    line-height: 24px;  
+						    font-size: 20px;
+							color: white;
+							margin-left:200px;
+							margin-top: 50px;
+							font-weight: bold; 
+						}
+						
+
+						h4{
+							top: 200px;
+							font-size: 20px;
+							letter-spacing: 3px;
+							margin-top: 30px;
+							
+						}
+						p{
+							text-align: justify;
+						}
+						.W {
+							width: 200px;
+							height: 300px;
+							border: 3px solid white;
+						    margin-right: 370px;
+			
+						}
+			
+						#E {
+							margin-top: 10px;
+							margin-left: 280px;
+							width: 100px;
+							height: 50px;
+							
+							
+							
+						}
+						#B{
+						
+									
+							         font-size: 13px;
+									
+							margin-top: -2px;
+							margin-left: -3px;
+							color: #74b9ff;
+									
+							
+						}
+						#BB{
+						
+									
+							         font-size: 13px;
+								color:#fab1a0 ;
+							margin-top: -2px;
+							margin-left: -3px;
+							
+									
+							
+						}
+						#C{
+						
+									
+							         font-size: 13px;
+									
+							margin-top: -2px;
+							margin-left: -3px;
+							
+									
+							
+						}
+						#D{
+							width: 50px;
+									 height: 10px;
+									 padding: 20px;
+									
+							         font-size: 12px;
+									
+							border: 3px solid white;
+							
+									 color: white;
+							background: rgb(0,0,0,0.4);
+							margin-top: 5px;
+							margin-left: 40px;
+						}
+			        #R{
+						display: flex;
+						margin-top: 20px;
+						margin-left: 80px;
+						flex-wrap: wrap
+					}
+						
+						.turn{
+						 
+						   
+						  animation:turn 0.4s linear infinite;   /*速度控制*/
+						 animation-iteration-count:10;
+						}
+						/* 
+						  turn : 定义的动画名称
+						  1s : 动画时间
+						  linear : 动画以何种运行轨迹完成一个周期
+						  infinite :规定动画应该无限次播放
+						 */
+						@keyframes turn{
+						  0%{-webkit-transform:rotateY(0deg);}
+						  25%{-webkit-transform:rotateY(90deg);}
+						  50%{-webkit-transform:rotateY(180deg);}
+						  75%{-webkit-transform:rotateY(270deg);}
+						  100%{-webkit-transform:rotateY(360deg);
+						  }
+			 
+		</style>
+
+
+		
+	</head>
+	<body>
+		
+			<div class="O">
+				
+			
+			<div id="one">
+			
+			</div>
+			
+				<div class="W" id="0041">
+            
+				</div>
+				</div>
+				<div id="R">
+					<button "button" class="btn btn-default "id="E" onclick="adimg()"  >开始答题</button>
+					<div id="D">
+						
+					</div>
+				</div>
+			<div id="N">
+				
+			
+		<button "button" class="btn btn-default " onclick="a()" id="M"value="1" style="font-weight: 500;">A</button>
+		<button "button" class="btn btn-default " onclick="b()" id="M" value="2" style="font-weight: 500;">B</button>
+		<button "button" class="btn btn-default " onclick="c()" id="M" value="3" style="font-weight: 500;">C</button>
+		<button "button" class="btn btn-default " onclick="d()" id="M" value="4" style="font-weight: 500;">D</button>
+		</div>
+		
+		
+
+	</body>
+	<script>
+	var q;
+		function adimg() {
+			var a = "<img src='img/卡背2.png' style='width: 200px;height: 300px;'>";
+			var b = document.getElementById("0041");
+				b.innerHTML = a; 
+		
+			   $("img").addClass("turn"); /*旋转*/
+			      var ll = setTimeout(function(){rty()},2000);
+		}
+		function rty()
+		
+		{	
+			/*改变图片*/
+			var a= "  <img src='img/T/00.jpg'style='width: 250px;height: 400px;'>";
+			var b = document.getElementById("0041");
+			var x = Math.floor(Math.random() * 29);
+			    
+			var m ;
+		
+	        var p;
+		
+			switch (x) {
+				
+	     case 0:
+	     	a = "<img src='问题/0.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 3;
+	     	break;
+	     case 1:
+	     	a = "<img src='问题/1.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+	     case 2:
+	     	a = "<img src='问题/2.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 1;
+	     	break;
+	     case 3:
+	     	a = "<img src='问题/3.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 2;
+	     	break;
+	     case 4:
+	     	a = "<img src='问题/4.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+	     case 5:
+	     	a = "<img src='问题/5.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 3;
+	     	break;
+	     case 6:
+	     	a = "<img src='问题/6.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+	     case 7:
+	     	a = "<img src='问题/7.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 1;
+	     	break;
+	     case 8:
+	     	a = "<img src='问题/8.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 2;
+	     	break;
+	     case 9:
+	     	a = "<img src='问题/9.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+	     case 10:
+	     	a = "<img src='问题/10.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 3;
+	     	break;
+	     case 11:
+	     	a = "<img src='问题/11.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+	     case 12:
+	     	a = "<img src='问题/12.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 1;
+	     	break;
+	     case 13:
+	     	a = "<img src='问题/13.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 2;
+	     	break;
+	     case 14:
+	     	a = "<img src='问题/14.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+	     case 15:
+	     	a = "<img src='问题/15.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 3;
+	     	break;
+	     case 16:
+	     	a = "<img src='问题/16.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+	     case 17:
+	     	a = "<img src='问题/17.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 1;
+	     	break;
+	     case 18:
+	     	a = "<img src='问题/18.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 2;
+	     	break;
+	     case 19:
+	     	a = "<img src='问题/19.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+	     case 20:
+	     	a = "<img src='问题/20.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 3;
+	     	break;
+	     case 21:
+	     	a = "<img src='问题/21.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+	     case 22:
+	     	a = "<img src='问题/22.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 1;
+	     	break;
+	     case 23:
+	     	a = "<img src='问题/23.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 2;
+	     	break;
+	     case 24:
+	     	a = "<img src='问题/24.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+	     case 25:
+	     	a = "<img src='问题/25.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 3;
+	     	break;
+	     case 26:
+	     	a = "<img src='问题/26.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+	     case 27:
+	     	a = "<img src='问题/27.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 1;
+	     	break;
+	     case 28:
+	     	a = "<img src='问题/28.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 2;
+	     	break;
+	     case 29:
+	     	a = "<img src='问题/29.png' style='width: 200px; height: 300px;'>";
+	     	b.innerHTML = a;
+	     	q = 4;
+	     	break;
+		
+			}
+		
+
+		clearTimeout()
+		
+		
+			
+			}
+			
+		function a(){
+		var t=document.getElementById("D")
+			var l;
+			var p=1;
+			
+			if(p==q){
+					l="<div id='B'>回答正确</div>" ;
+			}
+		   else{
+			   	l="<div id='BB'>回答错误</div>" ;
+		   }
+			t.innerHTML=l;
+		}
+		function b(){
+		var t=document.getElementById("D")
+			var l;
+			var p=2;
+			
+			if(p==q){
+					l="<div id='B'>回答正确</div>" ;
+			}
+		   else{
+			   	l="<div id='BB'>回答错误</div>" ;
+		   }
+			t.innerHTML=l;
+		}
+		function c(){
+		var t=document.getElementById("D")
+			var l;
+			var p=3;
+			
+			if(p==q){
+					l="<div id='B'>回答正确</div>" ;
+			}
+		   else{
+			   	l="<div id='BB'>回答错误</div>" ;
+		   }
+			t.innerHTML=l;
+		}
+		function d(){
+		var t=document.getElementById("D")
+			var l;
+			var p=4;
+			
+			if(p==q){
+					l="<div id='B'>回答正确</div>" ;
+			}
+		   else{
+			   	l="<div id='BB'>回答错误</div>" ;
+		   }
+			t.innerHTML=l;
+		}
+							
+						
+		
+	</script>
+	
+</html>
